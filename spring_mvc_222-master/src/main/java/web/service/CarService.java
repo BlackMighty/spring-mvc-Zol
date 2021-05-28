@@ -4,6 +4,7 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.stereotype.Component;
 import web.model.Car;
 
+import java.sql.SQLOutput;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -13,11 +14,9 @@ public class CarService {
 
     List<Car> carAll = new ArrayList<>();
 
+
     public List<Car> getCars(int count) {
 
-        if (count >= 0) {
-            count = 0;
-        }
 
         carAll.add(new Car(4, "Toyota", "white"));
         carAll.add(new Car(4, "Niva", "black"));
@@ -32,6 +31,4 @@ public class CarService {
         return carAll;
     }
 
-
 }
-
